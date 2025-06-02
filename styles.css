@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.oscuro {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+header {
+  background-color: #222;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#modoOscuroBtn {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+}
+
+section {
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.modelos {
+  background-color: #fff;
+  text-align: center;
+}
+
+body.oscuro .modelos {
+  background-color: #1e1e1e;
+}
+
+.imagen-modelos {
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.interactivos {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+body.oscuro .interactivos {
+  background-color: #1a1a1a;
+}
+
+.interactivos h1 {
+  margin-bottom: 40px;
+}
+
+.modelo-3d {
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+model-viewer {
+  width: 100%;
+  height: 400px;
+  background-color: #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+body.oscuro model-viewer {
+  background-color: #333;
+}
+
+.contacto {
+  background-image: url('fondo-contacto.jpg'); 
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.4);
+  font-size: 0.9em;
+}

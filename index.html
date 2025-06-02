@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio 3D</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#modelos">Modelos 3D</a></li>
+        <li><a href="#interactivos">Interactuar</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button id="modoOscuroBtn" title="Cambiar modo">💡</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sección de imagen completa -->
+    <section id="modelos" class="modelos">
+      <h1>Mis Modelos 3D</h1>
+      <img src="modelos_completo.jpg" alt="Modelos 3D" class="imagen-modelos">
+    </section>
+
+    <!-- Sección interactiva con 3 modelos -->
+    <section id="interactivos" class="interactivos">
+      <h1>Modelos Interactivos</h1>
+
+      <div class="modelo-3d">
+        <p>ESTOS SON LOS MODELOS MAS DESTACADOS, PERO TENGO MÁS, CONSULTAR LA INFO EN LA SECCION DE CONTACTOS</p>
+        <model-viewer src="modelo1.glb" alt="Modelo 1" auto-rotate camera-controls></model-viewer>
+        <p>Modelo 1</p>
+      </div>
+
+      <div class="modelo-3d">
+        <model-viewer src="modelo2.glb" alt="Modelo 2" auto-rotate camera-controls></model-viewer>
+        <p>Modelo 2</p>
+      </div>
+
+      <div class="modelo-3d">
+        <model-viewer src="modelo3.glb" alt="Modelo 3" auto-rotate camera-controls></model-viewer>
+        <p>Modelo 3</p>
+      </div>
+
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto" class="contacto">
+      <h1>CONTACTO</h1>
+      <p><strong>Cualquier duda consultar a:</strong></p>
+      <p><strong>Discord:</strong> <a href="https://discord.com/users/1023017820742750249" target="_blank">https://discord.com/users/Checho</a></p>
+      <p><strong>Correo:</strong> escalanteortizsergio6@gmail.com</p>
+      <p>Pedidos de modelos al Discord, con referencia de modelo 3d o idea ilustrada</p>
+
+      <footer>
+        <p>&copy; 2025 Sergio Escalante. Todos los derechos reservados.</p>
+        <p>No se permite el uso o distribución de los modelos sin autorización.</p>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    const btn = document.getElementById('modoOscuroBtn');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('oscuro');
+    });
+  </script>
+
+</body>
+</html>
