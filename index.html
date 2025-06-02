@@ -64,10 +64,35 @@
     </section>
   </main>
 
+  <!-- Script para modo oscuro -->
   <script>
     const btn = document.getElementById('modoOscuroBtn');
     btn.addEventListener('click', () => {
       document.body.classList.toggle('oscuro');
+    });
+  </script>
+
+  <!-- Script para bloquear clic derecho e inspección -->
+  <script>
+    // Desactiva clic derecho
+    document.addEventListener("contextmenu", function(e) {
+      e.preventDefault();
+    });
+
+    // Desactiva teclas comunes de inspección
+    document.addEventListener("keydown", function(e) {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "C")) ||
+        (e.ctrlKey && e.key === "u")
+      ) {
+        e.preventDefault();
+      }
+    });
+
+    // Desactiva arrastrar elementos
+    document.addEventListener("dragstart", function(e) {
+      e.preventDefault();
     });
   </script>
 
