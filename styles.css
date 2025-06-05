@@ -118,3 +118,54 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.4);
   font-size: 0.9em;
 }
+
+.formulario-comentario {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.formulario-comentario input,
+.formulario-comentario textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  width: 100%;
+}
+
+.formulario-comentario textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.formulario-comentario button {
+  padding: 10px;
+  font-weight: bold;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario-comentario button:hover {
+  background-color: #222;
+}
+
+body.oscuro .formulario-comentario {
+  background-color: rgba(255,255,255,0.05);
+}
+
+body.oscuro .formulario-comentario input,
+body.oscuro .formulario-comentario textarea {
+  background-color: #222;
+  color: white;
+}
