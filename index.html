@@ -56,7 +56,6 @@
       <p><strong>Discord:</strong> <a href="https://discord.com/users/1023017820742750249" target="_blank">https://discord.com/users/Checho</a></p>
       <p><strong>Correo:</strong> escalanteortizsergio6@gmail.com</p>
       <p>Pedidos de modelos al Discord, con referencia de modelo 3d o idea ilustrada</p>
-      <p><strong>Visitas únicas:</strong> <span id="contador-visitas">...</span></p>
 
       <footer>
         <p>&copy; 2025 Sergio Escalante. Todos los derechos reservados.</p>
@@ -97,26 +96,5 @@
     });
   </script>
 
-<script>
-  const contadorID = "checho15_models3d_unique_visits";
-
-  // Verifica si ya visitó desde este navegador
-  if (!localStorage.getItem(contadorID)) {
-    fetch("https://api.countapi.xyz/hit/checho15.github.io/models3d")
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById("contador-visitas").textContent = data.value;
-        localStorage.setItem(contadorID, "true");
-      });
-  } else {
-    // Ya visitó antes, solo mostrar el número
-    fetch("https://api.countapi.xyz/get/checho15.github.io/models3d")
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById("contador-visitas").textContent = data.value;
-      });
-  }
-</script>
-  
 </body>
 </html>
