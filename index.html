@@ -80,11 +80,29 @@
 
   <!-- Script para modo oscuro -->
   <script>
-    const btn = document.getElementById('modoOscuroBtn');
-    btn.addEventListener('click', () => {
-      document.body.classList.toggle('oscuro');
-    });
-  </script>
+  const btn = document.getElementById('modoOscuroBtn');
+  const icono = document.getElementById('iconoModo');
+
+  // Al cargar la página, aplicar preferencia guardada
+  if (localStorage.getItem('modo') === 'oscuro') {
+    document.body.classList.add('oscuro');
+    icono.classList.replace('fa-sun', 'fa-moon');
+  }
+
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('oscuro');
+
+    // Cambiar ícono y guardar preferencia
+    if (document.body.classList.contains('oscuro')) {
+      icono.classList.replace('fa-sun', 'fa-moon');
+      localStorage.setItem('modo', 'oscuro');
+    } else {
+      icono.classList.replace('fa-moon', 'fa-sun');
+      localStorage.setItem('modo', 'claro');
+    }
+  });
+</script>
+
 
   <!-- Script para bloquear clic derecho e inspección -->
   <script>
